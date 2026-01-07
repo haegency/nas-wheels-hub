@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/sheet";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import heroInventory from "@/assets/hero-inventory.jpg";
 
 const makes = ["All Makes", "Toyota", "Lexus", "Mercedes-Benz", "Honda", "Hyundai", "Kia", "Ford"];
 const bodyTypes = ["All Types", "sedan", "suv", "coupe", "truck", "bus", "hatchback", "wagon", "convertible"];
@@ -265,8 +266,13 @@ export default function Inventory() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-gradient-hero text-white py-24 pt-32">
-        <div className="section-container">
+      <section className="relative text-white py-24 pt-32 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroInventory})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
+        <div className="section-container relative z-10">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
             Our Inventory
           </h1>

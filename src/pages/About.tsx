@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Shield, Users, Award, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const values = [
   {
@@ -37,8 +38,13 @@ export default function About() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-gradient-hero text-white py-24 pt-32">
-        <div className="section-container">
+      <section className="relative text-white py-24 pt-32 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroAbout})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
+        <div className="section-container relative z-10">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
             About Nas Autos
           </h1>

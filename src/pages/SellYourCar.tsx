@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import heroSell from "@/assets/hero-sell.jpg";
 
 const benefits = [
   {
@@ -114,8 +115,13 @@ ${formData.description}`,
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-gradient-hero text-white py-24 pt-32">
-        <div className="section-container">
+      <section className="relative text-white py-24 pt-32 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroSell})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
+        <div className="section-container relative z-10">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
             Sell Your Car To Us
           </h1>
