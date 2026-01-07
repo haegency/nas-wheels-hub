@@ -121,7 +121,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-t border-border shadow-xl animate-fade-in-down">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-charcoal border-t border-white/10 shadow-xl animate-fade-in-down">
             <div className="section-container py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -130,17 +130,17 @@ export function Header() {
                   className={cn(
                     "py-3 px-4 rounded-lg text-base font-medium transition-colors",
                     isActive(link.href)
-                      ? "bg-accent/10 text-accent"
-                      : "text-foreground hover:bg-muted"
+                      ? "bg-accent/20 text-accent"
+                      : "text-white hover:bg-white/10"
                   )}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-border flex flex-col gap-3">
+              <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
                 <a
                   href="tel:+2340000000000"
-                  className="flex items-center gap-3 py-3 px-4 rounded-lg bg-muted"
+                  className="flex items-center gap-3 py-3 px-4 rounded-lg bg-white/10 text-white"
                 >
                   <Phone className="h-5 w-5 text-accent" />
                   <span className="font-medium">+234 000 000 0000</span>
