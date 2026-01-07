@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import heroTradein from "@/assets/hero-tradein.jpg";
 
 const benefits = [
   "Get fair market value for your current vehicle",
@@ -86,8 +87,13 @@ export default function TradeIn() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-gradient-hero text-white py-24 pt-32">
-        <div className="section-container">
+      <section className="relative text-white py-24 pt-32 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroTradein})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
+        <div className="section-container relative z-10">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
             Trade In Your Car
           </h1>
