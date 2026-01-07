@@ -15,19 +15,19 @@ export function HeroSection() {
       <div className="section-container relative z-10 py-32 md:py-40">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-white">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6 animate-fade-in">
+          <div className="text-white drop-shadow-lg">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6 animate-fade-in backdrop-blur-sm">
               <Award className="h-4 w-4" />
               Trusted Auto Dealer in Abuja
             </div>
             
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up [text-shadow:_0_2px_10px_rgb(0_0_0_/_40%)]">
               Your Trusted
               <span className="block text-gradient-gold">Auto Partner</span>
               in Karu, Abuja
             </h1>
             
-            <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-xl animate-fade-in-up delay-100">
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-xl animate-fade-in-up delay-100 [text-shadow:_0_1px_4px_rgb(0_0_0_/_30%)]">
               Premium new and pre-owned vehicles with transparent pricing, 
               verified listings, and complete paperwork support. 
               Drive away with confidence.
