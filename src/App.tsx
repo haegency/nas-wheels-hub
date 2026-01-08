@@ -18,6 +18,9 @@ import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Compare from "./pages/Compare";
+import Testimonials from "./pages/Testimonials";
+import Services from "./pages/Services";
 
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminInventory from "./pages/admin/Inventory";
@@ -39,7 +42,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/inventory" element={<Inventory />} />
-            <Route path="/car/:id" element={<CarDetails />} />
+            <Route path="/cars/:slug" element={<CarDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/financing" element={<Financing />} />
@@ -48,6 +51,9 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/compare" element={<Compare />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/services" element={<Services />} />
 
             {/* Admin Routes */}
             <Route path="/admin" element={<ProtectedRoute requireStaff><AdminDashboard /></ProtectedRoute>} />

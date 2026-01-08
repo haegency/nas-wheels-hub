@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Search, Filter, X, SlidersHorizontal } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { CarCard } from "@/components/cars/CarCard";
+import { CarCardWithQuickView } from "@/components/cars/CarCardWithQuickView";
 import { CarCardSkeleton } from "@/components/cars/CarCardSkeleton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -355,7 +355,7 @@ export default function Inventory() {
                     <CarCardSkeleton />
                   </>
                 ) : cars && cars.length > 0 ? (
-                  cars.map((car) => <CarCard key={car.id} car={car} />)
+                  cars.map((car) => <CarCardWithQuickView key={car.id} car={car} />)
                 ) : (
                   <div className="col-span-full text-center py-16">
                     <p className="text-muted-foreground text-lg mb-4">
