@@ -12,7 +12,7 @@ import CarDetails from "./pages/CarDetails";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Financing from "./pages/Financing";
-import TradeIn from "./pages/TradeIn";
+import SwapYourCar from "./pages/SwapYourCar";
 import SellYourCar from "./pages/SellYourCar";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -46,7 +46,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/financing" element={<Financing />} />
-            <Route path="/trade-in" element={<TradeIn />} />
+            <Route path="/swap-your-car" element={<SwapYourCar />} />
             <Route path="/sell-your-car" element={<SellYourCar />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/blog" element={<Blog />} />

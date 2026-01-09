@@ -9,8 +9,8 @@ const navLinks = [
   { name: "Inventory", href: "/inventory" },
   { name: "Services", href: "/services" },
   { name: "Financing", href: "/financing" },
-  { name: "Trade-In", href: "/trade-in" },
-  { name: "Testimonials", href: "/testimonials" },
+  { name: "Swap Your Car", href: "/swap-your-car" },
+  { name: "Sell Your Car", href: "/sell-your-car" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -91,7 +91,7 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+2340000000000" className="flex items-center gap-2">
+            <a href="tel:+2348035644916" className="flex items-center gap-2">
               <Phone className={cn(
                 "h-4 w-4 transition-colors",
                 isScrolled ? "text-muted-foreground" : "text-white/70"
@@ -100,7 +100,7 @@ export function Header() {
                 "text-sm font-medium transition-colors",
                 isScrolled ? "text-foreground" : "text-white"
               )}>
-                +234 000 000 0000
+                +234 803 564 4916
               </span>
             </a>
             <Button variant="gold" size="sm" asChild>
@@ -140,11 +140,11 @@ export function Header() {
               ))}
               <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
                 <a
-                  href="tel:+2340000000000"
+                  href="tel:+2348035644916"
                   className="flex items-center gap-3 py-3 px-4 rounded-lg bg-white/10 text-white"
                 >
                   <Phone className="h-5 w-5 text-accent" />
-                  <span className="font-medium">+234 000 000 0000</span>
+                  <span className="font-medium">+234 803 564 4916</span>
                 </a>
                 <Button variant="gold" size="lg" className="w-full" asChild>
                   <Link to="/inventory">View Inventory</Link>

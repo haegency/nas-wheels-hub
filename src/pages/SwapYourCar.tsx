@@ -25,7 +25,7 @@ const benefits = [
   "Instant valuation and offer",
 ];
 
-export default function TradeIn() {
+export default function SwapYourCar() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ export default function TradeIn() {
 
       toast({
         title: "Request Submitted!",
-        description: "We'll evaluate your trade-in and contact you shortly.",
+        description: "We'll evaluate your car and contact you shortly.",
       });
 
       setFormData({
@@ -94,11 +94,11 @@ export default function TradeIn() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
         <div className="section-container relative z-10">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
-            Trade In Your Car
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up [text-shadow:_0_2px_10px_rgb(0_0_0_/_40%)]">
+            Swap Your Car
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl animate-fade-in-up delay-100">
-            Upgrade to a newer vehicle and get value for your current car. 
+          <p className="text-xl text-white/80 max-w-2xl animate-fade-in-up delay-100 [text-shadow:_0_1px_4px_rgb(0_0_0_/_30%)]">
+            Upgrade to a newer vehicle by swapping your current car. 
             Simple, transparent, hassle-free.
           </p>
         </div>
@@ -110,10 +110,10 @@ export default function TradeIn() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                How Trade-In Works
+                How Car Swap Works
               </h2>
               <p className="text-muted-foreground mb-8">
-                Trading in your vehicle is the easiest way to upgrade. We handle 
+                Swapping your vehicle is the easiest way to upgrade. We handle 
                 everything – you simply drive away in your new car.
               </p>
 
@@ -122,7 +122,7 @@ export default function TradeIn() {
                   { step: "1", title: "Submit Your Car Details", desc: "Tell us about your current vehicle" },
                   { step: "2", title: "Get a Valuation", desc: "We'll assess your car and make an offer" },
                   { step: "3", title: "Choose Your New Car", desc: "Browse our inventory for your upgrade" },
-                  { step: "4", title: "Complete the Trade", desc: "Your trade-in value is deducted from the price" },
+                  { step: "4", title: "Complete the Swap", desc: "Your car's value is deducted from the price" },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="w-10 h-10 rounded-full bg-accent text-charcoal flex items-center justify-center font-bold shrink-0">
@@ -141,7 +141,7 @@ export default function TradeIn() {
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-accent/5 rounded-3xl blur-2xl" />
               <img
                 src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
-                alt="Trade-in process"
+                alt="Car swap process"
                 className="relative rounded-2xl shadow-xl"
               />
             </div>
@@ -170,7 +170,7 @@ export default function TradeIn() {
 
             <div className="order-1 lg:order-2">
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                Benefits of Trading In
+                Benefits of Swapping Your Car
               </h2>
               <ul className="space-y-4">
                 {benefits.map((benefit) => (
@@ -191,13 +191,13 @@ export default function TradeIn() {
         </div>
       </section>
 
-      {/* Trade-In Form */}
+      {/* Swap Form */}
       <section className="py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Get Your Trade-In Value
+                Get Your Car Swap Value
               </h2>
               <p className="text-muted-foreground">
                 Tell us about your current vehicle and we'll provide a fair valuation.
@@ -325,7 +325,7 @@ export default function TradeIn() {
                 </div>
 
                 <Button type="submit" variant="gold" size="lg" disabled={isSubmitting} className="w-full">
-                  {isSubmitting ? "Submitting..." : "Get Trade-In Value"}
+                  {isSubmitting ? "Submitting..." : "Get Swap Value"}
                   <Send className="h-5 w-5" />
                 </Button>
               </form>

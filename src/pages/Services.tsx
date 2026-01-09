@@ -25,10 +25,10 @@ const services = [
   },
   {
     icon: RefreshCw,
-    title: "Trade-In Program",
-    description: "Upgrade your current vehicle by trading it in for a new one. Get a fair market value assessment and apply it towards your next purchase.",
+    title: "Swap Your Car",
+    description: "Upgrade your current vehicle by swapping it for a new one. Get a fair market value assessment and apply it towards your next purchase.",
     features: ["Free vehicle appraisal", "Fair market pricing", "Quick turnaround", "Hassle-free process"],
-    link: "/trade-in"
+    link: "/swap-your-car"
   },
   {
     icon: CreditCard,
@@ -182,7 +182,7 @@ export default function Services() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
+            <Button variant="outline" size="lg" className="border-white/30 text-white bg-white/10 hover:bg-white/20" asChild>
               <Link to="/contact">
                 Contact Us
               </Link>

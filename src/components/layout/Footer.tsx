@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const quickLinks = [
   { name: "Browse Inventory", href: "/inventory" },
   { name: "Financing Options", href: "/financing" },
-  { name: "Trade-In Your Car", href: "/trade-in" },
+  { name: "Swap Your Car", href: "/swap-your-car" },
   { name: "Sell Your Car", href: "/sell-your-car" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
@@ -49,7 +49,7 @@ export function Footer() {
               </Link>
             </Button>
             <Button variant="hero-outline" size="xl" className="border-charcoal/30 text-charcoal hover:bg-charcoal/10" asChild>
-              <a href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/2348035644916" target="_blank" rel="noopener noreferrer">
                 WhatsApp Us
               </a>
             </Button>
@@ -133,14 +133,14 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-accent shrink-0" />
-                  <a href="tel:+2340000000000" className="text-white/70 hover:text-accent transition-colors">
-                    +234 000 000 0000
+                  <a href="tel:+2348035644916" className="text-white/70 hover:text-accent transition-colors">
+                    +234 803 564 4916
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-accent shrink-0" />
-                  <a href="mailto:info@nasautos.com" className="text-white/70 hover:text-accent transition-colors">
-                    info@nasautos.com
+                  <a href="mailto:talk2nasreal6324@gmail.com" className="text-white/70 hover:text-accent transition-colors">
+                    talk2nasreal6324@gmail.com
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
