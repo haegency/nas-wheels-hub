@@ -396,7 +396,7 @@ export default function AdminInventory() {
                 <SelectContent>
                   <SelectItem value="brand_new">Brand New</SelectItem>
                   <SelectItem value="foreign_used">Foreign Used</SelectItem>
-                  <SelectItem value="local_used">Local Used</SelectItem>
+                  <SelectItem value="nigerian_used">Nigerian Used</SelectItem>
                 </SelectContent>
               </Select>
             </div>

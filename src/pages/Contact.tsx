@@ -120,8 +120,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <a href="tel:+2340000000000" className="text-muted-foreground hover:text-accent">
-                      +234 800 000 0000
+                    <a href="tel:+2348035644916" className="text-muted-foreground hover:text-accent">
+                      +234 803 564 4916
                     </a>
                   </div>
                 </div>
@@ -132,8 +132,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:info@nasautos.com.ng" className="text-muted-foreground hover:text-accent">
-                      info@nasautos.com.ng
+                    <a href="mailto:talk2nasreal6324@gmail.com" className="text-muted-foreground hover:text-accent">
+                      talk2nasreal6324@gmail.com
                     </a>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Contact() {
               </div>
 
               <Button variant="whatsapp" size="lg" className="w-full" asChild>
-                <a href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/2348035644916" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-5 w-5" />
                   Chat on WhatsApp
                 </a>
