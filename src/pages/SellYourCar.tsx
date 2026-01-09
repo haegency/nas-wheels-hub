@@ -63,12 +63,7 @@ export default function SellYourCar() {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.from("leads").insert({
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        lead_type: "sell_car" as const,
-        message: `Vehicle: ${formData.year} ${formData.make} ${formData.model}
+      const message = `Vehicle: ${formData.year} ${formData.make} ${formData.model}
 Mileage: ${formData.mileage} km
 Condition: ${formData.condition}
 Transmission: ${formData.transmission}
@@ -76,10 +71,28 @@ Fuel Type: ${formData.fuelType}
 Color: ${formData.color}
 Asking Price: ₦${formData.askingPrice}
 
-${formData.description}`,
+${formData.description}`;
+
+      const { error } = await supabase.from("leads").insert({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        lead_type: "sell_car" as const,
+        message,
       });
 
       if (error) throw error;
+
+      // Send email notification
+      await supabase.functions.invoke("send-lead-notification", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          leadType: "sell_car",
+          message,
+        },
+      });
 
       toast({
         title: "Request Submitted!",
