@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import heroTradein from "@/assets/hero-tradein.jpg";
+import heroSwap from "@/assets/hero-swap.jpg";
 
 const benefits = [
   "Get fair market value for your current vehicle",
@@ -46,15 +46,28 @@ export default function SwapYourCar() {
     setIsSubmitting(true);
 
     try {
+      const message = `Current Vehicle: ${formData.currentYear} ${formData.currentMake} ${formData.currentModel}\nMileage: ${formData.mileage}\nCondition: ${formData.condition}\nInterested In: ${formData.interestedVehicle}\n\n${formData.message}`;
+      
       const { error } = await supabase.from("leads").insert({
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         lead_type: "trade_in" as const,
-        message: `Current Vehicle: ${formData.currentYear} ${formData.currentMake} ${formData.currentModel}\nMileage: ${formData.mileage}\nCondition: ${formData.condition}\nInterested In: ${formData.interestedVehicle}\n\n${formData.message}`,
+        message,
       });
 
       if (error) throw error;
+
+      // Send email notification
+      await supabase.functions.invoke("send-lead-notification", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          leadType: "trade_in",
+          message,
+        },
+      });
 
       toast({
         title: "Request Submitted!",
@@ -90,7 +103,7 @@ export default function SwapYourCar() {
       <section className="relative text-white py-24 pt-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroTradein})` }}
+          style={{ backgroundImage: `url(${heroSwap})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
         <div className="section-container relative z-10">

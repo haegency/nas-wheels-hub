@@ -47,6 +47,17 @@ export default function Contact() {
 
       if (error) throw error;
 
+      // Send email notification
+      await supabase.functions.invoke("send-lead-notification", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          leadType: formData.leadType,
+          message: formData.message || "No message provided",
+        },
+      });
+
       toast({
         title: "Message Sent!",
         description: "We'll get back to you as soon as possible.",

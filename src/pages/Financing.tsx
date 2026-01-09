@@ -80,15 +80,28 @@ export default function Financing() {
     setIsSubmitting(true);
 
     try {
+      const message = `Employment: ${formData.employmentStatus}\nMonthly Income: ${formData.monthlyIncome}\nVehicle Interest: ${formData.vehicleInterest}\n\n${formData.message}`;
+      
       const { error } = await supabase.from("leads").insert({
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         lead_type: "financing_request" as const,
-        message: `Employment: ${formData.employmentStatus}\nMonthly Income: ${formData.monthlyIncome}\nVehicle Interest: ${formData.vehicleInterest}\n\n${formData.message}`,
+        message,
       });
 
       if (error) throw error;
+
+      // Send email notification
+      await supabase.functions.invoke("send-lead-notification", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          leadType: "financing_request",
+          message,
+        },
+      });
 
       toast({
         title: "Request Submitted!",
